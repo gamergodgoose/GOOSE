@@ -17,7 +17,7 @@ app.use(express.json());
 app.use("/API/quiz",require("./Routes/quizRoutes"));
 app.use("/API/room",require("./Routes/roomRoutes"));
 
-require("./Socket/gameSocket")(io);
+
 setupSocket(io);
 server.listen(process.env.PORT, () => {
   console.log("Server Running");
